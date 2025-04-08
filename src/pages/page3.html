@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Cuch - Inscribirse</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon_cuch_web.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="../assets/logo_cuch_web.png" alt="Logo cuch" class="LogoCuch" />
+      <h1>Centro Universitario Chivilcoy</h1>
+      <nav class="nav-Conteiner">
+        <ul class="nav-Content">
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="./page2.html">Plan de estudios</a></li>
+          <li><a href="./page3.html">Inscribirse</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content_main">
+        <h2>Formulario de inscripción</h2>
+        <fieldset>
+          <form action="/submitform">
+            <label for="name">Nombre:</label><br />
+            <input type="text" id="name" name="name" required />
+
+            <label for="subname">Apellido:</label>
+            <input type="text" id="subname" name="subname" required /><br />
+
+            <label for="dni">Numero de Documento:</label>
+            <input type="text" id="dni" name="dni" required />
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br />
+            <input
+              type="date"
+              id="fecha_nacimiento"
+              name="fecha_nacimiento"
+              required
+            /><br />
+
+            <label for="correo">Correo Electrónico:</label><br />
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              required
+            /><br /><br />
+
+            <label for="telefono">Teléfono:</label><br />
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+            /><br /><br />
+
+            <input type="submit" value="Enviar" />
+          </form>
+        </fieldset>
+
+        <p>Datos de la carrera</p>
+        <fieldset>
+          <form action="/submitform">
+            <label for="seleccionCarrera"
+              >Seleccione la carrera a la que va a inscribirse:</label
+            >
+            <input
+              type="hidden"
+              name="seleccionCarrera"
+              id="seleccionCarrera"
+              value="Tecnicatura en programacion"
+            />
+          </form>
+        </fieldset>
+      </div>
+    </main>
+    <footer>
+      <h3>Contacto</h3>
+      <strong>Dirección:</strong>
+      <p>Av. c. Calderón 424</p>
+      <p>Chivilcoy, Buenos Aires</p>
+      <strong>Teléfono:</strong>
+      <p>+54 (2346) 432493</p>
+    </footer>
+  </body>
+</html>
