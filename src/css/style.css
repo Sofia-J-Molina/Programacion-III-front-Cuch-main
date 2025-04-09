@@ -35,14 +35,9 @@ header {
 .nav-Content li a:hover {
   cursor: pointer;
   text-decoration: underline;
-  transition-duration: 0.3s;
+  transition-duration: 3s;
 }
 
-main {
-  color: #ffffff;
-  align-items: center;
-  width: 100%;
-}
 .content_main h2 {
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -99,6 +94,7 @@ button {
 }
 button:hover {
   background-color: #0693e3;
+  color: #ffffff;
   transition: 1s;
 }
 .LogoCuch {
@@ -135,3 +131,18 @@ button:hover {
   padding-bottom: 20px;
   padding-top: 20px;
 }
+
+/*page plan de estudio*/
+.plan-Estudio {
+  padding: 40px;
+}
+th {
+  padding: 7px;
+  background-color: #5d6ba9;
+}
+tbody,
+td {
+  padding: 10px;
+  border: solid 1px;
+}
+/*page form*/
