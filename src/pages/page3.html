@@ -17,20 +17,22 @@
       <h1>Centro Universitario Chivilcoy</h1>
       <nav class="nav-Conteiner">
         <ul class="nav-Content">
-          <li><a href="../../index.html">Inicio</a></li>
-          <li><a href="./page2.html">Plan de estudios</a></li>
-          <li><a href="./page3.html">Inscribirse</a></li>
+          <li><a href="../../index.html">INICIO </a></li>
+          <li><a href="./page2.html">PLAN DE ESTUDIOS</a></li>
+          <li><a href="./page3.html">INSCRIBIRSE</a></li>
         </ul>
       </nav>
     </header>
     <main class="content-main-form">
       <h2>Formulario de inscripción</h2>
 
-      <fieldset>
-        <legend>Datos personales y de contacto</legend>
-        <form action="/submitform">
+      <form action="/submitform" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Datos personales y de contacto</legend>
+
           <label for="name">Nombre:</label>
           <input type="text" id="name" name="name" required />
+
           <label for="subname">Apellido:</label>
           <input type="text" id="subname" name="subname" required /><br />
 
@@ -50,32 +52,40 @@
 
           <label for="telefono">Teléfono:</label>
           <input type="tel" id="telefono" name="telefono" required /><br />
-        </form>
-      </fieldset>
+        </fieldset>
 
-      <fieldset>
-        <legend>Datos de la carrera</legend>
-        <form action="/submitform">
+        <fieldset>
+          <legend>Datos de la carrera</legend>
+
           <p>
             Seleccione la carrera a la que va a inscribirse:
-            <select>
+            <select name="carrera" required>
+              <option value="" disabled selected>Seleccione una opción</option>
               <option>Tec. Universitario en Programación (UTN)</option>
               <option>
                 Diplomatura Universitaria en Industrias Alimentarias (UTN)
               </option>
             </select>
           </p>
+
           <p>Marque la opción que corresponda:</p>
-          <!--
-          Es la primera vez que me anoto en una carrera en el cuch Realice otra
-          carrera en el cuch (completa o incompleta)
-        -->
 
-          <p>Cargar documentación</p>
-        </form>
-      </fieldset>
+          <label>
+            <input type="radio" name="respuesta" value="a" required />
+            Es la primera vez que me anoto a una carrera en el CUCH </label
+          ><br />
 
-      <button type="submit" value="Enviar">Enviar formulario</button>
+          <label>
+            <input type="radio" name="respuesta" value="b" required />
+            Realicé otra carrera en el Cuch (Completa o incompleta) </label
+          ><br />
+
+          <label for="archivo">Cargar documentación:</label>
+          <input type="file" id="archivo" name="archivo" required />
+        </fieldset>
+
+        <button type="submit" value="Enviar">Enviar formulario</button>
+      </form>
     </main>
 
     <footer>
